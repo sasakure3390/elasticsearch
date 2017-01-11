@@ -6,6 +6,7 @@ class TopController < ApplicationController
 
     # インデクシング時に呼び出されるメソッド
   # マッピングのデータを返すようにする
+   # テストコミット
   def as_indexed_json(options = {})
     attributes
       .symbolize_keys
