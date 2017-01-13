@@ -20,12 +20,23 @@ ActiveRecord::Base.transaction do
   kanagawa = Pref.create!(name: '神奈川県')
 
   #Itemの作成  
-  aho1 = Item.create!(name: 'あいほん', size: 1)
+  aho1 = Item.create!(name: 'あいほん1', size: 1)
+  aho2 = Item.create!(name: 'あいほん2', size: 1)
+  aho3 = Item.create!(name: 'あいほん3', size: 1)
+  aho4 = Item.create!(name: 'あいほん4', size: 1)
+  aho5 = Item.create!(name: 'あいほん5', size: 1)
+  aho6 = Item.create!(name: 'あいほん6', size: 1)
+  aho7 = Item.create!(name: 'あいほん7', size: 1)
+  aho8 = Item.create!(name: 'あいほん8', size: 1)
 
   # レストラン作成(各カテゴリ, 都道府県の掛け算で6件)
   Restaurant.create!([
     {
       name: '宮脇屋さん', name_kana: 'みやわきやさん', zip: '240-0113', address: '船橋法典',
+      pref: tokyo, category: teisyoku, closed: false
+    },
+    {
+      name: '工藤屋さん', name_kana: 'くどうやさん', zip: '240-0113', address: '船橋法典',
       pref: tokyo, category: teisyoku, closed: false
     },
     {
