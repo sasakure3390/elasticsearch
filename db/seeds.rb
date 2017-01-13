@@ -8,7 +8,7 @@
 # db/seeds.rb
 ActiveRecord::Base.transaction do
   # すべてのレコードを削除する
-  [Category, Pref, Restaurant].each(&:delete_all)
+  [Category, Pref, Restaurant, Item].each(&:delete_all)
 
   # カテゴリの作成(3件)
   teisyoku = Category.create!(name: '定食',      name_kana: 'ていしょく')
@@ -18,6 +18,9 @@ ActiveRecord::Base.transaction do
   # 都道府県の作成(2件)
   tokyo = Pref.create!(name: '東京都')
   kanagawa = Pref.create!(name: '神奈川県')
+
+  #Itemの作成  
+  aho1 = Item.create!(name: 'あいほん', size: 1)
 
   # レストラン作成(各カテゴリ, 都道府県の掛け算で6件)
   Restaurant.create!([
